@@ -39,7 +39,7 @@
 
                 <div class="d-flex align-items-center gap-3">
                     <button class="btn btn-purple px-4 d-flex align-items-center gap-2"
-                        onclick="playPodcast('Science Unlocked', 'Dr. Maya Williams', 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=100', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
+                        onclick="playPodcast(pTitle, pArtist, pImg, pSrc || 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
                         <i class="fa-solid fa-play"></i> Latest Episode
                     </button>
                     <button class="btn btn-outline-white px-4 border-secondary opacity-75">
@@ -165,6 +165,7 @@
         const pArtist = urlParams.get('artist') || 'Dr. Maya Williams';
         const pImg = urlParams.get('img') || 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop';
         const pCat = urlParams.get('cat') || 'Science';
+        const pSrc = urlParams.get('src');
 
         // Update UI
         document.querySelector('.podcast-header h1').textContent = pTitle;
@@ -174,6 +175,12 @@
         document.getElementById('footer-title').textContent = pTitle;
         document.getElementById('footer-artist').textContent = pArtist;
         document.getElementById('footer-thumb').src = pImg;
+
+        // Auto-play if source is provided
+        if (pSrc) {
+            audio.src = pSrc;
+            audio.play().catch(e => console.log('Auto-play blocked:', e));
+        }
 
         function playPodcast(title, artist, thumb, src) {
             document.getElementById('footer-title').textContent = title;
