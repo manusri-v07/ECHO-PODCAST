@@ -218,6 +218,7 @@
 
     <audio id="main-audio"></audio>
 
+    <script src="player.js"></script>
     <script>
         const allEchos = [
             { title: "Future Vision", author: "Hardware Trends", img: "https://images.unsplash.com/photo-1590602849531-fc7f5e0d47c3?auto=format&fit=crop&w=100&q=80", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
@@ -256,17 +257,6 @@
             } else {
                 resultsSection.classList.add('d-none');
             }
-        }
-
-        function goToPlayer(title, artist, img, cat, src) {
-            const params = new URLSearchParams({
-                title: title,
-                artist: artist,
-                img: img,
-                cat: cat,
-                src: src || 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
-            });
-            window.location.href = `player.html?${params.toString()}`;
         }
     </script>
 </body>

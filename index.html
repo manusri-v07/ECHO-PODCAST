@@ -265,70 +265,7 @@
 
     <audio id="main-audio" style="display: none;"></audio>
 
-    <script>
-        const audio = document.getElementById('main-audio');
-        const playIcon = document.getElementById('play-icon');
-        const progressBar = document.getElementById('progress-bar');
-        const progressKnob = document.getElementById('progress-knob');
-        const currentTimeEl = document.getElementById('current-time');
-        const totalTimeEl = document.getElementById('total-time');
-
-        function formatTime(seconds) {
-            const min = Math.floor(seconds / 60);
-            const sec = Math.floor(seconds % 60);
-            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
-        }
-
-        function goToPlayer(title, artist, img, cat, src) {
-            const params = new URLSearchParams({
-                title: title,
-                artist: artist,
-                img: img,
-                cat: cat,
-                src: src || 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
-            });
-            window.location.href = `player.html?${params.toString()}`;
-        }
-
-        function playPodcast(title, artist, thumb, src) {
-            document.getElementById('footer-title').textContent = title;
-            document.getElementById('footer-artist').textContent = artist + ' • Jan 2024';
-            document.getElementById('footer-thumb').src = thumb;
-
-            if (audio.src !== src) {
-                audio.src = src;
-                audio.play();
-            } else {
-                togglePlayback();
-            }
-        }
-
-        function togglePlayback() {
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-
-        audio.onplay = () => {
-            playIcon.className = 'fa-solid fa-pause';
-        };
-        audio.onpause = () => {
-            playIcon.className = 'fa-solid fa-play';
-        };
-
-        audio.ontimeupdate = () => {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = progress + '%';
-            progressKnob.style.left = progress + '%';
-            currentTimeEl.textContent = formatTime(audio.currentTime);
-        };
-
-        audio.onloadedmetadata = () => {
-            totalTimeEl.textContent = formatTime(audio.duration);
-        };
-    </script>
+    <script src="player.js"></script>
 </body>
 
 </html>

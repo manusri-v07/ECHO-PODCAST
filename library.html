@@ -41,7 +41,8 @@
         <section id="lib-subscribed" class="lib-section">
             <div class="row g-4">
                 <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="echo-card" onclick="location.href='player.html'">
+                    <div class="echo-card"
+                        onclick="goToPlayer('The Daily Tech', 'Sarah Chen', 'https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=400&q=80', 'Tech', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
                         <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=400&q=80"
                             alt="Tech">
                         <h6 class="echo-title-sm mt-2 text-white">The Daily Tech</h6>
@@ -49,180 +50,69 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="echo-card" onclick="location.href='player.html'">
+                    <div class="echo-card"
+                        onclick="goToPlayer('Mystery Files', 'Detective Audio', 'https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=400&auto=format&fit=crop', 'Mystery', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">
                         <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=400&auto=format&fit=crop"
                             alt="Mystery">
                         <h6 class="echo-title-sm mt-2 text-white">Mystery Files</h6>
                         <p class="echo-author-sm">Detective Audio</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="echo-card" onclick="location.href='player.html'">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
-                            alt="Laugh">
-                        <h6 class="echo-title-sm mt-2 text-white">Laugh Track</h6>
-                        <p class="echo-author-sm">Comedy Central</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="echo-card" onclick="location.href='player.html'">
-                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80"
-                            alt="Science">
-                        <h6 class="echo-title-sm mt-2 text-white">Science Unlocked</h6>
-                        <p class="echo-author-sm">Dr. Maya Williams</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                    <div class="echo-card" onclick="location.href='player.html'">
-                        <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=400&q=80"
-                            alt="News">
-                        <h6 class="echo-title-sm mt-2 text-white">Morning Briefing</h6>
-                        <p class="echo-author-sm">Global News Network</p>
-                    </div>
-                </div>
+                <!-- More items can be added here -->
             </div>
         </section>
 
-        <!-- Section: Saved Episodes (List with Progress) -->
+        <!-- Section: Saved Episodes -->
         <section id="lib-saved" class="lib-section d-none">
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=100&q=80"
+            <div class="lib-list-item"
+                onclick="playPodcast('Echo 14: Silent Symphony', 'Mind Relax', 'https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=100&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3')">
+                <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=100&q=80"
                     class="lib-thumb" alt="AI">
                 <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">The AI Revolution: What's Next?</h6>
-                    <p class="text-secondary small mb-1">The Daily Tech</p>
-                    <div class="lib-meta-text">
-                        <span>2024-01-15</span>
-                        <span><i class="fa-regular fa-clock me-1"></i> 45:32</span>
-                    </div>
+                    <h6 class="text-white fw-bold mb-1">Echo 14: Silent Symphony</h6>
+                    <p class="text-secondary small mb-1">Mind Relax</p>
                 </div>
-                <div class="lib-progress-bg">
-                    <div class="lib-progress-fill" style="width: 35%;"></div>
-                </div>
-            </div>
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=100&q=80"
-                    class="lib-thumb" alt="Vision">
-                <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">Apple Vision Pro: First Impressions</h6>
-                    <p class="text-secondary small mb-1">The Daily Tech</p>
-                    <div class="lib-meta-text">
-                        <span>2024-01-12</span>
-                        <span><i class="fa-regular fa-clock me-1"></i> 38:15</span>
-                    </div>
-                </div>
-                <div class="lib-progress-bg">
-                    <div class="lib-progress-fill" style="width: 45%;"></div>
-                </div>
-            </div>
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=100&auto=format&fit=crop"
-                    class="lib-thumb" alt="Flight">
-                <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">The Disappearance of Flight 370</h6>
-                    <p class="text-secondary small mb-1">Mystery Files</p>
-                    <div class="lib-meta-text">
-                        <span>2024-01-14</span>
-                        <span><i class="fa-regular fa-clock me-1"></i> 52:48</span>
-                    </div>
-                </div>
-                <div class="lib-progress-bg">
-                    <div class="lib-progress-fill" style="width: 30%;"></div>
-                </div>
-            </div>
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=100&q=80"
-                    class="lib-thumb" alt="Comedy">
-                <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">Comedy Gold: Best of 2023</h6>
-                    <p class="text-secondary small mb-1">Laugh Track</p>
-                    <div class="lib-meta-text">
-                        <span>2024-01-10</span>
-                        <span><i class="fa-regular fa-clock me-1"></i> 1:02:30</span>
-                    </div>
-                </div>
-                <div class="lib-progress-bg">
-                    <div class="lib-progress-fill" style="width: 85%;"></div>
-                </div>
+                <button class="btn btn-purple btn-sm rounded-pill"><i class="fa-solid fa-play"></i></button>
             </div>
         </section>
 
-        <!-- Section: History (Simple List) -->
+        <!-- Section: History -->
         <section id="lib-history" class="lib-section d-none">
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=100&auto=format&fit=crop"
-                    class="lib-thumb" alt="History">
-                <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">The Disappearance of Flight 370</h6>
-                    <p class="text-secondary small mb-1">Mystery Files</p>
-                    <div class="lib-meta-text">
-                        <span>Completed 2 days ago</span>
-                        <span><i class="fa-solid fa-check-circle text-success ms-1"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=100&q=80"
-                    class="lib-thumb" alt="History">
-                <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">Global Markets Update: January 2024</h6>
-                    <p class="text-secondary small mb-1">Morning Briefing</p>
-                    <div class="lib-meta-text">
-                        <span>Completed 3 days ago</span>
-                        <span><i class="fa-solid fa-check-circle text-success ms-1"></i></span>
-                    </div>
-                </div>
-            </div>
-            <div class="lib-list-item">
-                <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=100&q=80"
-                    class="lib-thumb" alt="History">
-                <div class="flex-grow-1">
-                    <h6 class="text-white fw-bold mb-1">From Garage to $10B: The Stripe Story</h6>
-                    <p class="text-secondary small mb-1">Startup Stories</p>
-                    <div class="lib-meta-text">
-                        <span>Completed last week</span>
-                        <span><i class="fa-solid fa-check-circle text-success ms-1"></i></span>
-                    </div>
-                </div>
-            </div>
+            <p class="text-secondary">Your listening history will appear here.</p>
         </section>
     </main>
 
-    <!-- Footer Player -->
+    <!-- Global Footer Player -->
     <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
         <div class="d-flex align-items-center" style="width: 25%;">
             <img id="footer-thumb"
-                src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=100&q=80"
-                width="45" height="45" class="rounded-2 me-3" alt="Now Playing">
+                src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=100" width="45"
+                height="45" class="rounded-2 me-3" alt="Now Playing">
             <div class="overflow-hidden">
                 <h6 id="footer-title" class="echo-title-sm text-white text-truncate m-0" style="font-size: 0.8rem;">
-                    Global Markets Update</h6>
-                <p id="footer-artist" class="echo-author-sm m-0" style="font-size: 0.7rem;">Morning Briefing • Jan 2024
-                </p>
+                    Ready to play</h6>
+                <p id="footer-artist" class="echo-author-sm m-0" style="font-size: 0.7rem;">Select an Echo</p>
             </div>
         </div>
-        <div class="player-controls-container d-flex flex-column align-items-center justify-content-center flex-grow-1">
-            <div class="player-controls d-flex align-items-center mb-1">
-                <button class="btn btn-play-toggle border-0"
-                    style="width: 35px; height: 35px; background: white; color: black; border-radius: 50%;">
-                    <i class="fa-solid fa-play fa-xs"></i>
-                </button>
-            </div>
+        <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+            <button class="btn btn-play-toggle border-0" onclick="togglePlayback()"
+                style="width: 35px; height: 35px; background: white; color: black; border-radius: 50%;">
+                <i id="play-icon" class="fa-solid fa-play fa-xs"></i>
+            </button>
         </div>
         <div class="d-flex align-items-center justify-content-end gap-3" style="width: 25%;">
             <div class="custom-progress" style="width: 100px; height: 3px; background: #333;">
-                <div class="progress-bar-inner" style="width: 60%; background: #7C3AED;"></div>
+                <div class="progress-bar-inner" style="width: 0%; background: #7C3AED;"></div>
             </div>
         </div>
     </footer>
 
+    <audio id="main-audio"></audio>
+    <script src="player.js"></script>
     <script>
         function switchLibTab(tab) {
-            // Pills
             document.querySelectorAll('.lib-pill').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-
-            // Sections
             document.querySelectorAll('.lib-section').forEach(sec => sec.classList.add('d-none'));
             document.getElementById('lib-' + tab).classList.remove('d-none');
         }

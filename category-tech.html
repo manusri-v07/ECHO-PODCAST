@@ -38,41 +38,43 @@
         </div>
 
         <div class="row g-4 mt-2">
-            <!-- Reuse Echo Cards -->
+            <!-- Echo Card 1 -->
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="echo-card h-100">
+                <div class="echo-card h-100"
+                    onclick="playPodcast('Echo 01: Future Vision', 'Hardware Trends', 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
                     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop"
                         alt="Tech">
                     <div class="echo-card-body">
                         <h6 class="echo-title text-white">Echo 01: Future Vision</h6>
                         <p class="echo-description">Hardware and VR trends.</p>
-                        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
                         <button class="btn btn-purple btn-sm w-100">Listen Now</button>
                     </div>
                 </div>
             </div>
 
+            <!-- Echo Card 2 -->
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="echo-card h-100">
+                <div class="echo-card h-100"
+                    onclick="playPodcast('Echo 07: Tech Frontiers', 'AI Systems', 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3')">
                     <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80"
                         alt="Tech">
                     <div class="echo-card-body">
                         <h6 class="echo-title text-white">Echo 07: Tech Frontiers</h6>
                         <p class="echo-description">AI and Robot dynamics.</p>
-                        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
                         <button class="btn btn-purple btn-sm w-100">Listen Now</button>
                     </div>
                 </div>
             </div>
 
+            <!-- Echo Card 3 -->
             <div class="col-6 col-md-4 col-lg-3">
-                <div class="echo-card h-100">
+                <div class="echo-card h-100"
+                    onclick="playPodcast('Echo 19: Meta Verse', 'VR Today', 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3')">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
                         alt="Tech">
                     <div class="echo-card-body">
                         <h6 class="echo-title text-white">Echo 19: Meta Verse</h6>
                         <p class="echo-description">Daily metaverse updates.</p>
-                        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
                         <button class="btn btn-purple btn-sm w-100">Listen Now</button>
                     </div>
                 </div>
@@ -80,6 +82,32 @@
         </div>
     </main>
 
+    <!-- Global Footer Player -->
+    <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
+        <div class="d-flex align-items-center" style="width: 25%;">
+            <img id="footer-thumb" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=100"
+                width="45" height="45" class="rounded-2 me-3" alt="Now Playing">
+            <div class="overflow-hidden">
+                <h6 id="footer-title" class="echo-title-sm text-white text-truncate m-0" style="font-size: 0.8rem;">
+                    Ready to play</h6>
+                <p id="footer-artist" class="echo-author-sm m-0" style="font-size: 0.7rem;">Select an Echo</p>
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+            <button class="btn btn-play-toggle border-0" onclick="togglePlayback()"
+                style="width: 35px; height: 35px; background: white; color: black; border-radius: 50%;">
+                <i id="play-icon" class="fa-solid fa-play fa-xs"></i>
+            </button>
+        </div>
+        <div class="d-flex align-items-center justify-content-end gap-3" style="width: 25%;">
+            <div class="custom-progress" style="width: 100px; height: 3px; background: #333;">
+                <div class="progress-bar-inner" style="width: 0%; background: #7C3AED;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="main-audio"></audio>
+    <script src="player.js"></script>
 </body>
 
 </html>
