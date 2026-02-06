@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <div class="d-flex align-items-center mb-5 px-3">
+            <i class="fa-solid fa-wave-square fa-2x text-purple me-3"></i>
+            <h3 class="fw-bold m-0">Echo</h3>
+        </div>
+
+        <div class="nav flex-column">
+            <a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="explore.html" class="nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
+            <a href="library.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> Library</a>
+            <a href="settings.html" class="nav-link"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="hero-banner shadow-lg">
+            <div class="hero-content">
+                <span class="badge bg-purple-light text-purple mb-2 px-3 py-2 rounded-pill fw-bold fs-xsmall"
+                    style="background: rgba(124, 58, 237, 0.2);">DAILY MIX</span>
+                <h1 class="display-4 fw-bold text-white mb-2">The Daily Tech</h1>
+                <p class="text-secondary mb-1 fw-medium">Sarah Chen</p>
+                <p class="text-secondary small mb-4 opacity-75">Your daily dose of technology news, trends, and insights
+                    from Silicon Valley and beyond.</p>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-purple px-4 d-flex align-items-center gap-2"
+                        onclick="playPodcast('The Daily Tech', 'Sarah Chen', 'https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=100&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
+                        <i class="fa-solid fa-play"></i> Listen Now
+                    </button>
+                    <a href="player.html" class="btn btn-outline-white px-4">View Show</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold m-0">Trending Now</h4>
+                <a href="explore.html" class="text-secondary text-decoration-none small fw-bold">See all <i
+                        class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=400&q=80"
+                            alt="Tech">
+                        <h6 class="echo-title-sm">The Daily Tech</h6>
+                        <p class="echo-author-sm">Sarah Chen</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=500&auto=format&fit=crop"
+                            alt="Mystery">
+                        <h6 class="echo-title-sm">Mystery Files</h6>
+                        <p class="echo-author-sm">Detective Audio</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+                            alt="Laugh">
+                        <h6 class="echo-title-sm">Laugh Track</h6>
+                        <p class="echo-author-sm">Comedy Central</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80"
+                            alt="Science">
+                        <h6 class="echo-title-sm">Science Unlocked</h6>
+                        <p class="echo-author-sm">Dr. Maya Williams</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=400&q=80"
+                            alt="Briefing">
+                        <h6 class="echo-title-sm">Morning Briefing</h6>
+                        <p class="echo-author-sm">Global News Network</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=400&q=80"
+                            alt="Startup">
+                        <h6 class="echo-title-sm">Startup Stories</h6>
+                        <p class="echo-author-sm">Venture Voice</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h4 class="fw-bold mb-4">Continue Listening</h4>
+            <div class="row g-3">
+                <div class="col-12 col-lg-3">
+                    <div class="continue-card"
+                        onclick="playPodcast('The AI Revolution: What\'s Next?', 'The Daily Tech', 'https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=100&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
+                        <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=100&q=80"
+                            alt="AI">
+                        <div class="overflow-hidden">
+                            <h6 class="echo-title-sm text-truncate text-white">The AI Revolution: What's Next?</h6>
+                            <p class="echo-author-sm">The Daily Tech • 2024-01-26</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="continue-card"
+                        onclick="playPodcast('Apple Vision Pro: First Impressions', 'The Daily Tech', 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=100&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">
+                        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=100&q=80"
+                            alt="Vision">
+                        <div class="overflow-hidden">
+                            <h6 class="echo-title-sm text-truncate text-white">Apple Vision Pro: First Impressions</h6>
+                            <p class="echo-author-sm">The Daily Tech • 2024-01-24</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="continue-card"
+                        onclick="playPodcast('The Disappearance of Flight 370', 'Mystery Files', 'https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=500&auto=format&fit=crop', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3')">
+                        <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=500&auto=format&fit=crop"
+                            alt="Flight">
+                        <div class="overflow-hidden">
+                            <h6 class="echo-title-sm text-truncate text-white">The Disappearance of Flight 370</h6>
+                            <p class="echo-author-sm">Mystery Files • 2024-01-20</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="continue-card"
+                        onclick="playPodcast('Comedy Gold: Best of 2023', 'Laugh Track', 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=100&q=80', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3')">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=100&q=80"
+                            alt="Comedy">
+                        <div class="overflow-hidden">
+                            <h6 class="echo-title-sm text-truncate text-white">Comedy Gold: Best of 2023</h6>
+                            <p class="echo-author-sm">Laugh Track • 2023-12-30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="fw-bold m-0">New Releases</h4>
+                <a href="explore.html" class="text-secondary text-decoration-none small fw-bold">See all <i
+                        class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80"
+                            alt="Echo 1">
+                        <h6 class="echo-title-sm text-white">Laugh Track</h6>
+                        <p class="echo-author-sm">Comedy Central</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80"
+                            alt="Echo 2">
+                        <h6 class="echo-title-sm text-white">Science Unlocked</h6>
+                        <p class="echo-author-sm">Dr. Maya Williams</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=400&q=80"
+                            alt="Echo 3">
+                        <h6 class="echo-title-sm text-white">Morning Briefing</h6>
+                        <p class="echo-author-sm">Global News Network</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=400&q=80"
+                            alt="Echo 4">
+                        <h6 class="echo-title-sm text-white">Startup Stories</h6>
+                        <p class="echo-author-sm">Venture Voice</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80"
+                            alt="Echo 5">
+                        <h6 class="echo-title-sm text-white">Mindful Moments</h6>
+                        <p class="echo-author-sm">Wellness Weekly</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="echo-card" onclick="location.href='player.html'">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80"
+                            alt="Echo 6">
+                        <h6 class="echo-title-sm text-white">Future Forward</h6>
+                        <p class="echo-author-sm">Innovation Lab</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
+        <div class="d-flex align-items-center" style="width: 25%; min-width: 200px;">
+            <img id="footer-thumb"
+                src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=100&q=80"
+                width="45" height="45" class="rounded-2 me-3" alt="Now Playing">
+            <div class="overflow-hidden">
+                <h6 id="footer-title" class="echo-title-sm text-white text-truncate m-0" style="font-size: 0.8rem;">
+                    Morning Briefing</h6>
+                <p id="footer-artist" class="echo-author-sm m-0" style="font-size: 0.7rem;">Global News Network • Jan
+                    2024</p>
+            </div>
+        </div>
+
+        <div class="player-controls-container d-flex flex-column align-items-center justify-content-center flex-grow-1">
+            <div class="player-controls d-flex align-items-center mb-1">
+                <button class="btn p-0 border-0 text-secondary opacity-50"><i
+                        class="fa-solid fa-backward-step"></i></button>
+                <button class="btn btn-play-toggle border-0 mx-4" onclick="togglePlayback()"
+                    style="width: 35px; height: 35px; background: white; color: black; border-radius: 50%;">
+                    <i id="play-icon" class="fa-solid fa-play fa-xs"></i>
+                </button>
+                <button class="btn p-0 border-0 text-secondary opacity-50"><i
+                        class="fa-solid fa-forward-step"></i></button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-end gap-3" style="width: 25%; min-width: 200px;">
+            <button class="btn text-secondary p-0 border-0"><i class="fa-solid fa-volume-high fa-xs"></i></button>
+            <div class="custom-progress" style="width: 100px; height: 3px; background: #333;">
+                <div class="progress-bar-inner" style="width: 60%; background: #7C3AED;"></div>
+                <div class="progress-knob" style="width: 8px; height: 8px; left: 60%; background: white;"></div>
+            </div>
+            <button class="btn text-secondary p-0 border-0"><i class="fa-solid fa-shuffle fa-xs"></i></button>
+        </div>
+    </footer>
+
+
+    <audio id="main-audio" style="display: none;"></audio>
+
+    <script>
+        const audio = document.getElementById('main-audio');
+        const playIcon = document.getElementById('play-icon');
+        const progressBar = document.getElementById('progress-bar');
+        const progressKnob = document.getElementById('progress-knob');
+        const currentTimeEl = document.getElementById('current-time');
+        const totalTimeEl = document.getElementById('total-time');
+
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+        }
+
+        function playPodcast(title, artist, thumb, src) {
+            document.getElementById('footer-title').textContent = title;
+            document.getElementById('footer-artist').textContent = artist + ' • Jan 2024';
+            document.getElementById('footer-thumb').src = thumb;
+
+            if (audio.src !== src) {
+                audio.src = src;
+                audio.play();
+            } else {
+                togglePlayback();
+            }
+        }
+
+        function togglePlayback() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        audio.onplay = () => {
+            playIcon.className = 'fa-solid fa-pause';
+        };
+        audio.onpause = () => {
+            playIcon.className = 'fa-solid fa-play';
+        };
+
+        audio.ontimeupdate = () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = progress + '%';
+            progressKnob.style.left = progress + '%';
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        };
+
+        audio.onloadedmetadata = () => {
+            totalTimeEl.textContent = formatTime(audio.duration);
+        };
+    </script>
+</body>
+
+</html>

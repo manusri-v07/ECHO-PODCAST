@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology - Echo Podcast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="d-flex align-items-center mb-5 px-3">
+            <i class="fa-solid fa-wave-square fa-2x text-primary-echo me-3" style="color: var(--accent-purple);"></i>
+            <h3 class="fw-bold m-0">Echo</h3>
+        </div>
+
+        <div class="nav flex-column">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="explore.html" class="nav-link active"><i class="fa-solid fa-compass"></i> Explore</a>
+            <a href="library.html" class="nav-link"><i class="fa-solid fa-book-mark"></i> Library</a>
+            <hr class="text-secondary opacity-25 px-3">
+            <a href="settings.html" class="nav-link"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="mb-4 d-flex align-items-center gap-3">
+            <a href="explore.html"
+                class="btn btn-outline-purple rounded-circle p-0 d-flex align-items-center justify-content-center"
+                style="width: 40px; height: 40px;"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2 class="fw-bold m-0">Technology</h2>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <!-- Reuse Echo Cards -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="echo-card h-100">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=500&auto=format&fit=crop"
+                        alt="Tech">
+                    <div class="echo-card-body">
+                        <h6 class="echo-title text-white">Echo 01: Future Vision</h6>
+                        <p class="echo-description">Hardware and VR trends.</p>
+                        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+                        <button class="btn btn-purple btn-sm w-100">Listen Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="echo-card h-100">
+                    <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80"
+                        alt="Tech">
+                    <div class="echo-card-body">
+                        <h6 class="echo-title text-white">Echo 07: Tech Frontiers</h6>
+                        <p class="echo-description">AI and Robot dynamics.</p>
+                        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+                        <button class="btn btn-purple btn-sm w-100">Listen Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="echo-card h-100">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                        alt="Tech">
+                    <div class="echo-card-body">
+                        <h6 class="echo-title text-white">Echo 19: Meta Verse</h6>
+                        <p class="echo-description">Daily metaverse updates.</p>
+                        <audio controls src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+                        <button class="btn btn-purple btn-sm w-100">Listen Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

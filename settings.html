@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Echo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="d-flex align-items-center mb-5 px-3">
+            <i class="fa-solid fa-wave-square fa-2x text-purple me-3"></i>
+            <h3 class="fw-bold m-0">Echo</h3>
+        </div>
+        <div class="nav flex-column">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="explore.html" class="nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
+            <a href="library.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> Library</a>
+            <a href="settings.html" class="nav-link active"><i class="fa-solid fa-gear"></i> Settings</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="mb-5">
+            <h2 class="fw-bold m-0 text-white">Settings</h2>
+            <p class="text-secondary small">Customize your Echo experience</p>
+        </div>
+
+        <div style="max-width: 600px;">
+            <!-- Section: Account -->
+            <div class="settings-section-label">Account</div>
+
+            <a href="#" class="settings-item">
+                <div class="settings-icon-box">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6>Profile</h6>
+                    <p>Manage your account settings</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-secondary opacity-25"></i>
+            </a>
+
+            <div class="settings-item">
+                <div class="settings-icon-box">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6>Notifications</h6>
+                    <p>Control your notification preferences</p>
+                </div>
+                <div class="form-check form-switch m-0 p-0">
+                    <input class="form-check-input" type="checkbox" checked>
+                </div>
+            </div>
+
+            <!-- Section: Playback -->
+            <div class="settings-section-label">Playback</div>
+
+            <a href="#" class="settings-item">
+                <div class="settings-icon-box">
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6>Audio Quality</h6>
+                    <p>High quality streaming</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-secondary opacity-25"></i>
+            </a>
+
+            <a href="#" class="settings-item">
+                <div class="settings-icon-box">
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6>Sleep Timer</h6>
+                    <p>Auto-pause after set time</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-secondary opacity-25"></i>
+            </a>
+
+            <!-- Section: Privacy & Support -->
+            <div class="settings-section-label">Privacy & Support</div>
+
+            <a href="#" class="settings-item">
+                <div class="settings-icon-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6>Privacy</h6>
+                    <p>Manage your data and privacy</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-secondary opacity-25"></i>
+            </a>
+
+            <a href="#" class="settings-item">
+                <div class="settings-icon-box">
+                    <i class="fa-regular fa-circle-question"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6>Help & Support</h6>
+                    <p>Get help with Echo</p>
+                </div>
+                <i class="fa-solid fa-chevron-right text-secondary opacity-25"></i>
+            </a>
+
+            <!-- Sign Out -->
+            <a href="login.html" class="settings-item sign-out-item">
+                <div class="settings-icon-box">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+                <div class="settings-content flex-grow-1">
+                    <h6 class="text-danger">Sign Out</h6>
+                </div>
+            </a>
+
+            <!-- Footer Message -->
+            <div class="mt-5 text-center text-secondary opacity-50" style="font-size: 0.75rem;">
+                Echo v1.0.0 • Made with <i class="fa-solid fa-heart text-purple"></i>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Player Bar (Shared) -->
+    <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
+        <div class="d-flex align-items-center" style="width: 25%;">
+            <img id="footer-thumb"
+                src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=100&q=80"
+                width="45" height="45" class="rounded-2 me-3" alt="Now Playing">
+            <div class="overflow-hidden">
+                <h6 id="footer-title" class="echo-title-sm text-white text-truncate m-0" style="font-size: 0.8rem;">
+                    Settings Overview</h6>
+                <p id="footer-artist" class="echo-author-sm m-0" style="font-size: 0.7rem;">Echo System</p>
+            </div>
+        </div>
+        <div class="player-controls-container d-flex flex-column align-items-center justify-content-center flex-grow-1">
+            <button class="btn btn-play-toggle border-0"
+                style="width: 35px; height: 35px; background: white; color: black; border-radius: 50%;">
+                <i class="fa-solid fa-play fa-xs"></i>
+            </button>
+        </div>
+        <div class="d-flex align-items-center justify-content-end gap-3" style="width: 25%;">
+            <div class="custom-progress" style="width: 100px; height: 3px; background: #333;">
+                <div class="progress-bar-inner" style="width: 10%; background: #7C3AED;"></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

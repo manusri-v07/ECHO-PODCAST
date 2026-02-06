@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Echos - Echo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <main class="container py-5" style="max-width: 1200px; padding-bottom: 120px;">
+        <!-- Back Button -->
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-chevron-left"></i> Back to Home
+        </a>
+
+        <div class="mb-5">
+            <h2 class="fw-bold m-0 border-bottom border-secondary border-opacity-10 pb-3">Featured Echos</h2>
+            <p class="text-secondary mt-3">Discover the full collection of premium Echos for your internship project.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Loop through Remaining 14 Echos -->
+            <script>
+                const echos = [
+                    { title: "Echo 07: Urban Explorations", author: "Silas Stone", img: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=400&q=80", desc: "Discover hidden city spots and cultural gems across the globe." },
+                    { title: "Echo 08: Deep Diver", author: "Marine Bio", img: "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=400&q=80", desc: "Deep dive into the mysteries of the deep blue sea." },
+                    { title: "Echo 09: Creative Pulse", author: "Art Talk", img: "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=400&q=80", desc: "Interviews with modern artists about their creative process." },
+                    { title: "Echo 10: Night Stories", author: "City Sleep", img: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=400&q=80", desc: "Immersive tales from the city that never sleeps." },
+                    { title: "Echo 11: Zenith Points", author: "Peak Quest", img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80", desc: "High-altitude adventures and mountain climbing diaries." },
+                    { title: "Echo 12: Echoes of Past", author: "History Now", img: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=400&q=80", desc: "Modern perspectives on historical world events." },
+                    { title: "Echo 13: Wired Life", author: "IoT Daily", img: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=400&q=80", desc: "How connected devices are changing our homes." },
+                    { title: "Echo 14: Silent Symphony", author: "Mind Relax", img: "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=400&q=80", desc: "ASMR and ambient soundscapes for extreme focus." },
+                    { title: "Echo 15: Neon Nights", author: "Synth Wave", img: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=400&q=80", desc: "Cyberpunk culture and the growth of synth lifestyle." },
+                    { title: "Echo 16: Forest Whisper", author: "Nature Hub", img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80", desc: "Wildlife conservation and the voices of the forest." },
+                    { title: "Echo 17: Pulse Check", author: "Health Tech", img: "https://images.unsplash.com/photo-1520974735194-6c88d7f8fcb3?auto=format&fit=crop&w=400&q=80", desc: "Cutting edge breakthroughs in surgical and medical tech." },
+                    { title: "Echo 18: Digital Soul", author: "Philo AI", img: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80", desc: "The philosophy of artificial life and digital immortality." },
+                    { title: "Echo 19: Meta Verse", author: "VR Today", img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80", desc: "Updates from the virtual frontier and digital economies." },
+                    { title: "Echo 20: Code & Carry", author: "Dev Live", img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80", desc: "The lifestyle and productivity of the modern developer." }
+                ];
+
+                echos.forEach(echo => {
+                    document.write(`
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="echo-card continue-card p-3 h-100 align-items-start" onclick="playPodcast('${echo.title}', '${echo.author}', '${echo.img}', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
+                                <img src="${echo.img}" style="width: 80px; height: 80px;" alt="Echo">
+                                <div class="flex-grow-1">
+                                    <h6 class="text-white fw-bold mb-1">${echo.title}</h6>
+                                    <p class="echo-description small mb-2">${echo.desc}</p>
+                                    <div class="d-flex gap-2">
+                                         <button class="btn btn-purple btn-sm rounded-pill px-3">Listen</button>
+                                         <button class="btn btn-outline-white btn-sm rounded-pill px-3 border-secondary">Sub</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                });
+            </script>
+        </div>
+    </main>
+
+    <!-- Global Footer Player -->
+    <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
+        <div class="d-flex align-items-center" style="width: 25%;">
+            <img id="footer-thumb"
+                src="https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=100&q=80"
+                width="45" height="45" class="rounded-2 me-3" alt="Now Playing">
+            <div class="overflow-hidden">
+                <h6 id="footer-title" class="echo-title-sm text-white text-truncate m-0" style="font-size: 0.8rem;">
+                    Ready to play</h6>
+                <p id="footer-artist" class="echo-author-sm m-0" style="font-size: 0.7rem;">Select an Echo</p>
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+            <button class="btn btn-play-toggle border-0" onclick="togglePlayback()"
+                style="width: 35px; height: 35px; background: white; color: black; border-radius: 50%;">
+                <i id="play-icon" class="fa-solid fa-play fa-xs"></i>
+            </button>
+        </div>
+        <div class="d-flex align-items-center justify-content-end gap-3" style="width: 25%;">
+            <i class="fa-solid fa-volume-high text-secondary opacity-50"></i>
+            <div class="custom-progress" style="width: 80px; height: 3px; background: #333;">
+                <div class="progress-bar-inner" style="width: 60%; background: #7C3AED;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <audio id="main-audio"></audio>
+
+    <script>
+        const audio = document.getElementById('main-audio');
+        const playIcon = document.getElementById('play-icon');
+
+        function playPodcast(title, artist, thumb, src) {
+            document.getElementById('footer-title').textContent = title;
+            document.getElementById('footer-artist').textContent = artist;
+            document.getElementById('footer-thumb').src = thumb;
+            audio.src = src;
+            audio.play();
+        }
+
+        function togglePlayback() {
+            if (audio.paused) audio.play();
+            else audio.pause();
+        }
+
+        audio.onplay = () => playIcon.className = 'fa-solid fa-pause fa-xs';
+        audio.onpause = () => playIcon.className = 'fa-solid fa-play fa-xs';
+    </script>
+</body>
+
+</html>
