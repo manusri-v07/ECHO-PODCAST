@@ -12,7 +12,6 @@
 
 <body>
 
-    <!-- Sidebar -->
     <nav class="sidebar">
         <div class="d-flex align-items-center mb-5 px-3">
             <i class="fa-solid fa-wave-square fa-2x text-purple me-3"></i>
@@ -26,27 +25,23 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         <h2 class="fw-bold mb-4">Explore</h2>
 
-        <!-- Search Bar -->
+
         <div class="explore-search-wrap">
             <i class="fa-solid fa-magnifying-glass text-secondary"></i>
             <input type="text" id="echo-search" placeholder="Search podcasts, episodes, or hosts..."
                 onkeyup="filterEchos()">
         </div>
 
-        <!-- Dynamic Search Results Section -->
         <section id="search-results-section" class="mb-5 d-none">
             <h5 class="fw-bold mb-3 text-purple">Search Results</h5>
             <div id="results-container" class="row g-3">
-                <!-- Results will be injected here -->
             </div>
             <hr class="border-secondary opacity-10 mt-5">
         </section>
 
-        <!-- Browse Categories -->
         <section class="mb-5">
             <h5 class="fw-bold mb-3">Browse Categories</h5>
             <div class="row g-3">
@@ -98,7 +93,6 @@
                         <span>Society</span>
                     </a>
                 </div>
-                <!-- 9th Category -->
                 <div class="col-6 col-md-4 col-lg-2">
                     <a href="category-music.html" class="cat-card bg-music">
                         <i class="fa-solid fa-music"></i>
@@ -108,12 +102,13 @@
             </div>
         </section>
 
-        <!-- Top Charts -->
         <section class="mb-5">
             <h5 class="fw-bold mb-3">Top Charts</h5>
             <div class="row">
                 <div class="col-12 col-xl-6">
-                    <div class="chart-list-item">
+                    <div class="chart-list-item"
+                        onclick="goToPlayer('The Daily Tech', 'Sarah Chen', 'https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=400&q=80', 'Tech')"
+                        style="cursor: pointer;">
                         <div class="chart-num">1</div>
                         <img src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=100&q=80"
                             class="chart-thumb" alt="T1">
@@ -126,7 +121,9 @@
                             <div class="opacity-50 fs-xsmall text-uppercase">listens</div>
                         </div>
                     </div>
-                    <div class="chart-list-item">
+                    <div class="chart-list-item"
+                        onclick="goToPlayer('Mystery Files', 'Detective Audio', 'https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=500&auto=format&fit=crop', 'Mystery')"
+                        style="cursor: pointer;">
                         <div class="chart-num">2</div>
                         <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=100&auto=format&fit=crop"
                             class="chart-thumb" alt="T2">
@@ -141,7 +138,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-xl-6">
-                    <div class="chart-list-item">
+                    <div class="chart-list-item"
+                        onclick="goToPlayer('Laugh Track', 'Comedy Central', 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80', 'Comedy')"
+                        style="cursor: pointer;">
                         <div class="chart-num">3</div>
                         <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=100&q=80"
                             class="chart-thumb" alt="T3">
@@ -154,7 +153,9 @@
                             <div class="opacity-50 fs-xsmall text-uppercase">listens</div>
                         </div>
                     </div>
-                    <div class="chart-list-item">
+                    <div class="chart-list-item"
+                        onclick="goToPlayer('Science Unlocked', 'Dr. Maya Williams', 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80', 'Science')"
+                        style="cursor: pointer;">
                         <div class="chart-num">4</div>
                         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=100&q=80"
                             class="chart-thumb" alt="T4">
@@ -168,9 +169,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- 5th Chart Item: Future Vision -->
                 <div class="col-12 col-xl-6 mt-xl-0 mt-3">
-                    <div class="chart-list-item">
+                    <div class="chart-list-item"
+                        onclick="goToPlayer('Future Vision', 'Hardware Trends', 'https://images.unsplash.com/photo-1590602849531-fc7f5e0d47c3?auto=format&fit=crop&w=600&q=80', 'Tech')"
+                        style="cursor: pointer;">
                         <div class="chart-num">5</div>
                         <img src="https://images.unsplash.com/photo-1590602849531-fc7f5e0d47c3?auto=format&fit=crop&w=100&q=80"
                             class="chart-thumb" alt="T5">
@@ -188,7 +190,6 @@
         </section>
     </main>
 
-    <!-- Footer Player -->
     <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
         <div class="d-flex align-items-center" style="width: 25%;">
             <img id="footer-thumb"
@@ -242,7 +243,7 @@
                 resultsSection.classList.remove('d-none');
                 container.innerHTML = filtered.map(e => `
                     <div class="col-12 col-md-6">
-                        <div class="chart-list-item mb-0" style="cursor: pointer;" onclick="window.location.href='player.html'">
+                        <div class="chart-list-item mb-0" style="cursor: pointer;" onclick="goToPlayer('${e.title}', '${e.author}', '${e.img}', 'Podcast')">
                             <img src="${e.img}" class="chart-thumb" alt="${e.title}">
                             <div class="chart-meta">
                                 <h6 class="echo-title-sm text-white mb-0">${e.title}</h6>
@@ -255,6 +256,16 @@
             } else {
                 resultsSection.classList.add('d-none');
             }
+        }
+
+        function goToPlayer(title, artist, img, cat) {
+            const params = new URLSearchParams({
+                title: title,
+                artist: artist,
+                img: img,
+                cat: cat
+            });
+            window.location.href = `player.html?${params.toString()}`;
         }
     </script>
 </body>

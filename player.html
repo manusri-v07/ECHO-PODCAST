@@ -125,7 +125,7 @@
         </div>
     </main>
 
-    <!-- Shared Footer Player Bar -->
+
     <footer class="fixed-bottom fixed-player d-flex align-items-center justify-content-between px-4">
         <div class="d-flex align-items-center" style="width: 25%;">
             <img id="footer-thumb"
@@ -158,6 +158,22 @@
     <script>
         const audio = document.getElementById('main-audio');
         const playIcon = document.getElementById('play-icon');
+
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const pTitle = urlParams.get('title') || 'Science Unlocked';
+        const pArtist = urlParams.get('artist') || 'Dr. Maya Williams';
+        const pImg = urlParams.get('img') || 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop';
+        const pCat = urlParams.get('cat') || 'Science';
+
+        // Update UI
+        document.querySelector('.podcast-header h1').textContent = pTitle;
+        document.querySelector('.podcast-header p').textContent = pArtist;
+        document.querySelector('.podcast-header img').src = pImg;
+        document.querySelector('.podcast-header .badge').textContent = pCat;
+        document.getElementById('footer-title').textContent = pTitle;
+        document.getElementById('footer-artist').textContent = pArtist;
+        document.getElementById('footer-thumb').src = pImg;
 
         function playPodcast(title, artist, thumb, src) {
             document.getElementById('footer-title').textContent = title;
